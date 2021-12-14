@@ -1,22 +1,21 @@
 ---
 layout:     post
-title:      Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
+title:      AsyncTask源码分析
 subtitle:   It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment
-date:       2019-03-29
-author:     Wang Pei
+date:       2021-12-14
+author:     Zejian Zhan
 header-img: img/art-Anaconda-TensorFlow.jpg
 catalog: true
 tags:
-    - ubuntu
-    - TensorFlow
-    - 深度学习
-    - CUDA
+    - Android
+    - 线程池
+    - 多线程
 ---
 
 
 # Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
 
-It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment  
+AsyncTask是Android很有特色的多线程切换框架，我们今天看看源码 
 --
 
 Nowadays, there are many tutorials that instruct how to install tensorflow or tensorflow-gpu. However, some people may feel it too complex just like me, because in those ways, you should download and install [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us), and then download and install [CUDA](https://developer.nvidia.com/cuda-downloads) (users need to pay attention to the version), afterwards you may sign an agreement and download cuDNN in [NVIDIA Developer](https://developer.nvidia.com/cudnn). Next, install python, and pip install tensorflow-gpu and so on. It's not esay for developer to do these, let alone it might causes some other error such as **version not match**, or **conflict between other python libraries** and so on. Moreover, if you want to [install tensorflow by compilation](https://www.tensorflow.org/install/gpu), it may take much more time.  
